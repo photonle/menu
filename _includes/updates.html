@@ -1,7 +1,11 @@
 {% assign updates = site.updates | reverse %}
 {% for update in updates %}
 	{% if update.legacy != null && update.legacy == false %}
+		{% if update.name %}
+		<h2>Update {{ update.title }} - {{ update.name }}</h2>
+		{% else %}
 		<h2>Update {{ update.title }}</h2>
+		{% endif %}
 		<h3>{{ update.date | date: '%B %-d, %Y' }}</h3>
 
 		{% if update.changes.size > 0 or update.content.size > 0 %}
