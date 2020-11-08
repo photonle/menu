@@ -1,0 +1,22 @@
+#updates {
+	li {
+		padding-left: 5px;
+		&::marker {
+			font-family: "Font Awesome 5 Free";
+			color: black;
+			font-weight: 900;
+		}
+
+		&.change::marker, &.fix::marker, &.update::marker {
+			content: "\f0ad";
+		}
+
+		&.add::marker, &.new::marker {
+			content: "\f303";
+		}
+
+		&.remove::marker {
+			content: "\f2ed";
+		}
+	}
+}

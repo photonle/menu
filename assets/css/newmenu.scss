@@ -1,0 +1,187 @@
+---
+---
+
+@import "updates.scss";
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	overflow: hidden
+}
+
+.panel {
+	margin: auto;
+	width: 98%;
+	height: 98%;
+	border-radius: 4px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	background: white;
+	background-clip: content-box;
+	z-index: 0
+}
+
+header {
+	height: 64px;
+	width: 100%;
+	display: block;
+	background: #e65c4e;
+	position: relative;
+	z-index: 1
+}
+
+h1 {
+	font-family: 'proxima-nova-soft';
+	font-weight: normal;
+	color: white;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	padding-top: 12px;
+	width: 200px;
+	text-align: center
+}
+
+h2 {
+	font-family: 'proxima-nova-soft';
+	font-weight: normal;
+	color: #e65c4e;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 4px 16px 0 16px
+}
+
+h3 {
+	font-family: 'proxima-nova-soft';
+	text-transform: uppercase;
+	color: #404040;
+	display: block;
+	border-bottom: 1px solid #e1e1e1;
+	font-weight: normal;
+	padding: 0 16px 12px 16px
+}
+
+h4 {
+	font-family: 'proxima-nova-soft';
+	text-transform: uppercase;
+	color: #9ba9b9;
+	display: block;
+	font-weight: normal;
+	padding: 0 16px
+}
+
+.close-button {
+	width: 96px;
+	height: 64px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	line-height: 64px;
+	vertical-align: middle;
+	font-family: 'proxima-nova-soft';
+	color: white;
+	cursor: pointer
+}
+
+.close-button:hover {
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25)
+}
+
+.content {
+	overflow: hidden;
+	height: 100%;
+	margin-top: -64px
+}
+
+.sidebar {
+	width: 200px;
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	list-style: none;
+	border-right: 1px solid #e65c4e;
+	overflow: hidden
+}
+
+.sidebar li {
+	padding: 0 16px;
+	font-family: 'proxima-nova-soft';
+	line-height: 48px;
+	vertical-align: middle;
+	height: 48px;
+	color: #e65c4e;
+	text-transform: uppercase;
+	font-size: 16px;
+	box-shadow: 1px 0 0 rgba(255, 209, 204, 0) inset;
+	-webkit-transition: box-shadow .1s linear
+}
+
+.sidebar li:first-child {
+	margin-top: 64px
+}
+
+.sidebar li:hover {
+	box-shadow: 200px 0 0 #ffd1cc inset;
+	cursor: pointer
+}
+
+.sidebar li.active {
+	color: white;
+	background: #9ba9b9
+}
+
+.sidebar li.active:hover {
+	box-shadow: none
+}
+
+.container {
+	display: block;
+	width: auto;
+	padding: 0;
+	margin: 0;
+	margin-top: 64px;
+	overflow: hidden;
+	height: 100%;
+	overflow-y: auto
+}
+
+.page {
+	padding: 16px;
+	overflow-y: auto;
+	height: 100%;
+	box-sizing: border-box;
+	margin-right: 4px;
+	margin-top: 4px
+}
+
+.page p {
+	font-family: 'proxima-nova-soft';
+	color: #404040;
+	padding: 0 16px
+}
+
+.page li {
+	font-family: 'proxima-nova-soft';
+	margin: 4px;
+	color: #404040
+}
+
+.page::-webkit-scrollbar {
+	width: 8px
+}
+
+.page::--webkit-scrollbar-track {
+	background: transparent
+}
+
+.page::-webkit-scrollbar-thumb {
+	border-radius: 1px;
+	background: rgba(0, 0, 0, 0.15)
+}
+
+code {
+	color: #9ba9b9
+}
