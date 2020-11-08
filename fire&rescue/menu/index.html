@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Photon is an advanced, realistic lighting engine for Garry's Mod." />
+	<title>Photon Lighting Engine</title>
+	<link href="/icon.png" rel="icon" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"> 
+	<script>try{Typekit.load();}catch(e){}</script>
+	<link href="/fonts/stylesheet.css" rel="stylesheet" />
+	<link href="/css/menunew10.css" rel="stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="/scripts/menu2.js"></script>
+</head>
+<body>
+	<div class="panel">
+		<header>
+			<img src="/fire&rescue/menu/logofrw.png" style="margin-top: 16px; margin-left: 44px;">
+			<div class="close-button" onclick="photon.close_menu()">
+				CLOSE
+			</div>
+		</header>
+		<div class="content">
+			<ul class="sidebar">
+				<!-- <li page="main" class="active">Settings</li> -->
+				<li page="usage" class="active">About</li>
+				<li page="updates">Updates</li>
+				<li page="developer">Developer</li>
+				<li page="credits">Credits</li>
+			</ul>
+			<div class="container">
+				<!-- <div class="page" id="main">
+					<h2>you're missing shit you fucking retard</h2>
+					<h3>List of missing addons</h3>
+					<p>Welcome to photon go suck my fucking dick you useless piece of fucking shit</p>
+				</div> -->
+				<div class="page" id="usage">
+					<h2>About Photon Fire & Rescue</h2>
+					
+					<h3>
+						About
+					</h3>
+					<p>
+						Photon Fire & Rescue is an official addon to the <a href="http://photon.lighting">Photon Lighting Engine</a>. It allows for the addition of new lighting and features specifically targeted to increasing the accuracy of fire and EMS vehicles. This addon requires Photon to operate as it simply builds upon the already existing engine. 
+					</p>
+					<h3>
+						How can I add Photon Fire & Rescue to my server?
+					</h3>
+					<p>
+						If required, a workshop file may link to the addon in order to operate properly. If it does not, then Photon Fire & Rescue is not required to use Photon. F&R can be added via your server's Workshop collection and is strongly recommended in order to stay up to date.
+						If you wish to add custom or unofficial Photon vehicles to your server, you must add them separately, along with any other requirements.
+					</p>
+					<h3>
+						Can I request a certain engines or x-car be added?
+					</h3>
+					<p>
+						At this time there are a few Photon Official engines in the works. As for engines/EMS vehicles on the workshop now these can be updated to include the new lighting if their creator wishes. 
+					</p>
+				</div>
+				<div class="page" id="updates">
+					<h2>
+						Update 1
+					</h2>
+					<h3>
+						July 26, 2017
+					</h3>
+					<ul>
+						<li>Photon Fire & Rescue public release</li>
+						<li>2014 Seagrave Marauder II Engine added</li>
+					</ul>
+					<br/>
+					<h2>
+						Update 0.1
+					</h2>
+					<h3>
+						April 28, 2017
+					</h3>
+					<ul>
+						<li>Photon Fire & Rescue private beta release</li>
+						<li>New components:
+							<ul>
+								<li>Federal Signal AeroDynic LED</li>
+								<li>Federal Signal Vision SLR Split</li>
+								<li>Whelen 600</li>
+								<li>Whelen TIR6</li>
+								<li>FDNY Rear Engine Lightbar</li>
+							</ul>	
+						</li>
+						<li>New sprites (listed under 'Developer' page)</li>
+						<li>Please contact <a href="http://steamcommunity.com/id/noble9/">Noble</a> if you discover any bugs</li>
+					</ul>
+				</div>
+				<div class="page" id="developer">
+					<h2>Developer Resources</h2>
+					<h3>
+						Official Component Documentation
+					</h3>
+					<p>
+						<strong>Federal Signal AeroDynic LED</strong><br/>
+						Lightbar commonly used on FDNY engines. Has 24 LEDs and 2 rotators.<br/><br/>
+						EMV.Auto code:<br/>
+						<code id="pad">
+							{<br/>
+        					&emsp;ID <code id="two">=</code> <code id="four">"Federal Signal AeroDynic FDNY New"</code>,<br/>
+        					&emsp;Scale <code id="two">=</code> <code id="three">1</code>,<br/>
+        					&emsp;Pos <code id="two">=</code> Vector( <code id="three">0, 0, 0</code> ),<br/>
+        					&emsp;Ang <code id="two">=</code> Angle( <code id="three">0, 0, 0</code> )<br/>
+    						},
+    					</code><br/><br/>
+    					Additonal EMV.Auto options: (only needed if changing light colors)<br/>
+    					<code id="pad">
+    						&emsp;Color1 <code id="two">=</code> <code id="four">"RED"</code>,<br/>
+    						&emsp;Color2 <code id="two">=</code> <code id="four">"WHITE"</code>
+    					</code>
+					</p><br/>
+					<p>
+						<strong>Federal Signal Vision SLR Split</strong><br/>
+						Lightbar similar to the Vision SLR but larger. Has 11 LED rotators. Takedown illumination compatible.<br/><br/>
+						EMV.Auto code:<br/>
+						<code id="pad">
+							{<br/>
+        					&emsp;ID <code id="two">=</code> <code id="four">"Federal Signal Vision SLR Split"</code>,<br/>
+        					&emsp;Scale <code id="two">=</code> <code id="three">1</code>,<br/>
+        					&emsp;Pos <code id="two">=</code> Vector( <code id="three">0, 0, 0</code> ),<br/>
+        					&emsp;Ang <code id="two">=</code> Angle( <code id="three">0, 0, 0</code> )<br/>
+    						},
+    					</code>
+					</p><br/>
+					<p>
+						<strong>Whelen 600</strong><br/>
+						Single white LED.<br/><br/>
+						EMV.Auto code:<br/>
+						<code id="pad">
+							{<br/>
+        					&emsp;ID <code id="two">=</code> <code id="four">"Whelen 600"</code>,<br/>
+        					&emsp;Scale <code id="two">=</code> <code id="three">1</code>,<br/>
+        					&emsp;Pos <code id="two">=</code> Vector( <code id="three">0, 0, 0</code> ),<br/>
+        					&emsp;Ang <code id="two">=</code> Angle( <code id="three">0, 0, 0</code> )<br/>
+    						},
+    					</code><br/><br/>
+    					Additonal EMV.Auto options:<br/>
+    					<code id="pad">
+    						&emsp;Color1 <code id="two">=</code> <code id="four">"WHITE"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"A"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY2"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY3"</code>
+    					</code>
+					</p><br/>
+					<p>
+						<strong>Whelen 600 Red</strong><br/>
+						Single red LED.<br/><br/>
+						EMV.Auto code:<br/>
+						<code id="pad">
+							{<br/>
+        					&emsp;ID <code id="two">=</code> <code id="four">"Whelen 600 Red"</code>,<br/>
+        					&emsp;Scale <code id="two">=</code> <code id="three">1</code>,<br/>
+        					&emsp;Pos <code id="two">=</code> Vector( <code id="three">0, 0, 0</code> ),<br/>
+        					&emsp;Ang <code id="two">=</code> Angle( <code id="three">0, 0, 0</code> )<br/>
+    						},
+    					</code><br/><br/>
+    					Additonal EMV.Auto options:<br/>
+    					<code id="pad">
+    						&emsp;Color1 <code id="two">=</code> <code id="four">"RED"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"A"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY2"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY3"</code>
+    					</code>
+					</p><br/>
+					<p>
+						<strong>Whelen 600 Blue</strong><br/>
+						Single blue LED.<br/><br/>
+						EMV.Auto code:<br/>
+						<code id="pad">
+							{<br/>
+        					&emsp;ID <code id="two">=</code> <code id="four">"Whelen 600 Blue"</code>,<br/>
+        					&emsp;Scale <code id="two">=</code> <code id="three">1</code>,<br/>
+        					&emsp;Pos <code id="two">=</code> Vector( <code id="three">0, 0, 0</code> ),<br/>
+        					&emsp;Ang <code id="two">=</code> Angle( <code id="three">0, 0, 0</code> )<br/>
+    						},
+    					</code><br/><br/>
+    					Additonal EMV.Auto options:<br/>
+    					<code id="pad">
+    						&emsp;Color1 <code id="two">=</code> <code id="four">"BLUE"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"A"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY2"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY3"</code>
+    					</code>
+					</p><br/>
+					<p>
+						<strong>Whelen 600 Amber</strong><br/>
+						Single amber LED.<br/><br/>
+						EMV.Auto code:<br/>
+						<code id="pad">
+							{<br/>
+        					&emsp;ID <code id="two">=</code> <code id="four">"Whelen 600 Amber"</code>,<br/>
+        					&emsp;Scale <code id="two">=</code> <code id="three">1</code>,<br/>
+        					&emsp;Pos <code id="two">=</code> Vector( <code id="three">0, 0, 0</code> ),<br/>
+        					&emsp;Ang <code id="two">=</code> Angle( <code id="three">0, 0, 0</code> )<br/>
+    						},
+    					</code><br/><br/>
+    					Additonal EMV.Auto options:<br/>
+    					<code id="pad">
+    						&emsp;Color1 <code id="two">=</code> <code id="four">"AMBER"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"A"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY2"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY3"</code>
+    					</code>
+					</p><br/>
+					<p>
+						<strong>Whelen TIR6</strong><br/>
+						Single white LED. Smaller than the Whelen 600.<br/><br/>
+						EMV.Auto code:<br/>
+						<code id="pad">
+							{<br/>
+        					&emsp;ID <code id="two">=</code> <code id="four">"Whelen TIR6"</code>,<br/>
+        					&emsp;Scale <code id="two">=</code> <code id="three">1</code>,<br/>
+        					&emsp;Pos <code id="two">=</code> Vector( <code id="three">0, 0, 0</code> ),<br/>
+        					&emsp;Ang <code id="two">=</code> Angle( <code id="three">0, 0, 0</code> )<br/>
+    						},
+    					</code><br/><br/>
+    					Additonal EMV.Auto options:<br/>
+    					<code id="pad">
+    						&emsp;Color1 <code id="two">=</code> <code id="four">"WHITE"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"A"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY2"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY3"</code>
+    					</code>
+					</p><br/>
+					<p>
+						<strong>Whelen TIR6 Red</strong><br/>
+						Single red LED. Smaller than the Whelen 600.<br/><br/>
+						EMV.Auto code:<br/>
+						<code id="pad">
+							{<br/>
+        					&emsp;ID <code id="two">=</code> <code id="four">"Whelen TIR6 Red"</code>,<br/>
+        					&emsp;Scale <code id="two">=</code> <code id="three">1</code>,<br/>
+        					&emsp;Pos <code id="two">=</code> Vector( <code id="three">0, 0, 0</code> ),<br/>
+        					&emsp;Ang <code id="two">=</code> Angle( <code id="three">0, 0, 0</code> )<br/>
+    						},
+    					</code><br/><br/>
+    					Additonal EMV.Auto options:<br/>
+    					<code id="pad">
+    						&emsp;Color1 <code id="two">=</code> <code id="four">"RED"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"A"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY2"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY3"</code>
+    					</code>
+					</p><br/>
+					<p>
+						<strong>Whelen TIR6 Blue</strong><br/>
+						Single blue LED. Smaller than the Whelen 600.<br/><br/>
+						EMV.Auto code:<br/>
+						<code id="pad">
+							{<br/>
+        					&emsp;ID <code id="two">=</code> <code id="four">"Whelen TIR6 Blue"</code>,<br/>
+        					&emsp;Scale <code id="two">=</code> <code id="three">1</code>,<br/>
+        					&emsp;Pos <code id="two">=</code> Vector( <code id="three">0, 0, 0</code> ),<br/>
+        					&emsp;Ang <code id="two">=</code> Angle( <code id="three">0, 0, 0</code> )<br/>
+    						},
+    					</code><br/><br/>
+    					Additonal EMV.Auto options:<br/>
+    					<code id="pad">
+    						&emsp;Color1 <code id="two">=</code> <code id="four">"BLUE"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"A"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY2"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY3"</code>
+    					</code>
+					</p><br/>
+					<p>
+						<strong>Whelen TIR6 Amber</strong><br/>
+						Single amber LED. Smaller than the Whelen 600.<br/><br/>
+						EMV.Auto code:<br/>
+						<code id="pad">
+							{<br/>
+        					&emsp;ID <code id="two">=</code> <code id="four">"Whelen TIR6 Amber"</code>,<br/>
+        					&emsp;Scale <code id="two">=</code> <code id="three">1</code>,<br/>
+        					&emsp;Pos <code id="two">=</code> Vector( <code id="three">0, 0, 0</code> ),<br/>
+        					&emsp;Ang <code id="two">=</code> Angle( <code id="three">0, 0, 0</code> )<br/>
+    						},
+    					</code><br/><br/>
+    					Additonal EMV.Auto options:<br/>
+    					<code id="pad">
+    						&emsp;Color1 <code id="two">=</code> <code id="four">"AMBER"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"A"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY2"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"FDNY3"</code>
+    					</code>
+					</p><br/>
+					<p>
+						<strong>FDNY Rear Engine Lightbar</strong><br/>
+						Rear lightbar commonly seen on FDNY engines in pairs. Inlcudes both new (no phase and A) and old (phases B and C) flash patterns.<br/><br/>
+						EMV.Auto code:<br/>
+						<code id="pad">
+							{<br/>
+        					&emsp;ID <code id="two">=</code> <code id="four">"FDNY Rear Lightbar"</code>,<br/>
+        					&emsp;Scale <code id="two">=</code> <code id="three">1</code>,<br/>
+        					&emsp;Pos <code id="two">=</code> Vector( <code id="three">0, 0, 0</code> ),<br/>
+        					&emsp;Ang <code id="two">=</code> Angle( <code id="three">0, 0, 0</code> )<br/>
+    						},
+    					</code><br/><br/>
+    					Additonal EMV.Auto options:<br/>
+    					<code id="pad">
+    						&emsp;Color1 <code id="two">=</code> <code id="four">"RED"</code>,<br/>
+    						&emsp;Color2 <code id="two">=</code> <code id="four">"AMBER"</code>,<br/>
+    						&emsp;Color3 <code id="two">=</code> <code id="four">"BLUE"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"A"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"B"</code>,<br/>
+    						&emsp;Phase <code id="two">=</code> <code id="four">"C"</code>
+    					</code>
+					</p><br/>
+					<h3>
+						Sprite list
+					</h3>
+					<p>A list of sprites added if you'd like to use them in your custom components/vehicles.</p>
+					<ul><code id="four">
+						<li><code id="four">materials/sprites/emv/evm_fedsig_vision_slr_split_illum</code></li>
+						<li><code id="four">materials/sprites/emv/emv_whelen_600</code></li>
+						<li><code id="four">materials/sprites/emv/emv_whelen_600_brake</code></li>
+						<li><code id="four">materials/sprites/emv/emv_whelen_600_brake_sm</code></li>
+						<li><code id="four">materials/sprites/emv/emv_whelen_600_flood_circle</code></li>
+						<li><code id="four">materials/sprites/emv/emv_whelen_600_headlight</code></li>
+						<li><code id="four">materials/sprites/emv/emv_whelen_600_reverse</code></li>
+						<li><code id="four">materials/sprites/emv/emv_whelen_600_turn_left</code></li>
+						<li><code id="four">materials/sprites/emv/emv_whelen_600_turn_left_sm</code></li>
+						<li><code id="four">materials/sprites/emv/emv_whelen_600_turn_right</code></li>
+						<li><code id="four">materials/sprites/emv/emv_whelen_600_turn_right_sm</code></li>
+						<li><code id="four">materials/sprites/emv/whelen_tir6</code></li></code>
+					</ul>	
+				</div>
+				<div class="page" id="credits">
+					<h2>Credits</h2>
+							<p>This mod would not be possible if not for the dedication, work and inspiration of dozens of others. If you believe this mod features your work and you are not credited, please <a href="http://steamcommunity.com/id/noble9/">contact me</a>.</p>
+
+		<h3>Photon</h3>
+
+		<p><a href="http://steamcommunity.com/id/ischmal">Schmal</a> - Creator of the Photon Lighting Engine and helped me along the way through a variety of issues</p>
+
+		<p><a href="http://steamcommunity.com/id/thesendest/">TheSenDest</a> - Assisted in the accuracy of FDNY light patterns</p>
+
+		<h3>Photon Fire & Rescue light components</h3>
+
+		<p>Modeled, textured, and coded by <a href="http://steamcommunity.com/id/noble9/">Noble</a></p>
+
+		<h3>Fire engine models</h3>
+
+		<p>Originally created by <a href="https://www.flipswitchgames.net/">FlipSwitch Games</a> for EmergeNYC</p>
+
+		<p>Rigged and ported by <a href="http://steamcommunity.com/id/MetroHD/">Metro</a></p>
+
+		<p>Ripped and retextured by <a href="http://steamcommunity.com/id/noble9/">Noble</a></p>
+
+		<h4>Disclaimer</h4>
+
+		<p>All third-party assets in this mod as used on a non-commercial basis. Cited assets not authored by me are copyrighted to their respective owners.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
