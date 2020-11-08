@@ -12,3 +12,8 @@ windows.tabs = {
 		})
 	}
 }
+
+$(document).ready(function(){
+	tabs.bind()
+	tabs.set("usage")
+})
