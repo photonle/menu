@@ -1,4 +1,4 @@
-windows.tabs = {
+window.tabs = {
 	set: function(id){
 		$(".container > .page").hide()
 		$("#" + id).show()
