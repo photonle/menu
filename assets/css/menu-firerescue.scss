@@ -160,7 +160,7 @@ a:link, a:active, a:visited {
 .page {
 	padding: 16px;
 	overflow-y: auto;
-	height: 100%;
+	height: calc(100% - 64px);
 	box-sizing: border-box;
 	margin-right: 4px;
 	margin-top: 4px;
