@@ -15,5 +15,14 @@ window.tabs = {
 
 $(document).ready(function(){
 	tabs.bind()
-	tabs.set("usage")
+
+	var active = $(".sidebar li.active")
+	// Set either the one marked as active.
+	// Or if none are, fall back to the first sidebar element.
+	if (active.length === 0){
+		active = $(".sidebar li").first()
+	} else {
+		active = active.first()
+	}
+	tabs.set(active.attr("page"))
 })
