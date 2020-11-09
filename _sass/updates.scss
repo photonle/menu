@@ -1,22 +1,28 @@
 #updates {
 	li {
-		padding-left: 5px;
-		&::marker {
+		list-style-type: none;
+
+		&::before {
 			font-family: "Font Awesome 5 Free";
 			color: black;
 			font-weight: 900;
+			padding-right: 6px;
 		}
 
-		&.change::marker, &.fix::marker, &.update::marker {
+		&.change::before, &.fix::before, &.update::before {
 			content: "\f0ad";
 		}
 
-		&.add::marker, &.new::marker {
+		&.add::before, &.new::before {
 			content: "\f303";
 		}
 
-		&.remove::marker {
+		&.remove::before {
 			content: "\f2ed";
+		}
+
+		&.info::before {
+			content: "\f129";
 		}
 	}
 }
