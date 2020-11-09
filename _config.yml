@@ -2,6 +2,9 @@ sass:
   style: compressed
   sass_dir: _sass
 
+baseurl: "menu"
+url: "https://photonle.github.io/"
+
 collections:
   updates:
     output: true
