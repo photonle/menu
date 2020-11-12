@@ -2,8 +2,8 @@ sass:
   style: compressed
   sass_dir: _sass
 
-baseurl: "/menu"
-url: "https://photonle.github.io/"
+baseurl: ""
+url: "https://menu.photon.lighting/"
 
 collections:
   updates:
