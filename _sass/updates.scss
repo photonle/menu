@@ -1,0 +1,40 @@
+#updates {
+	> ul {
+		margin-left: 2.5em;
+		padding-left: 0;
+		list-style-type: none;
+
+		> li {
+			position: relative;
+		}
+	}
+
+	li {
+		&::before {
+			font-family: "Font Awesome 5 Free";
+			color: black;
+			font-weight: 900;
+			left: -2em;
+			position: absolute;
+			text-align: center;
+			width: 2em;
+			line-height: inherit;
+		}
+
+		&.change::before, &.fix::before, &.update::before {
+			content: "\f0ad";
+		}
+
+		&.add::before, &.new::before {
+			content: "\f303";
+		}
+
+		&.remove::before {
+			content: "\f2ed";
+		}
+
+		&.info::before {
+			content: "\f129";
+		}
+	}
+}

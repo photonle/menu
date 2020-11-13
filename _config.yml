@@ -1,0 +1,14 @@
+sass:
+  style: compressed
+  sass_dir: _sass
+
+baseurl: ""
+url: "https://menu.photon.lighting/"
+
+collections:
+  updates:
+    output: true
+  updatesfr:
+    output: true
+
+exclude: ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/", ".idea"]
