@@ -1,0 +1,47 @@
+---
+name: Hot Sulfur Springs
+date: June 13, 2020
+changes:
+  breaking:
+    - "*.Sequences.PARK is reserved for the Park Kill function."
+    - "*.Sequences.BRAKE and *.Sequences.REVERSE are reserved for component based PI."
+  deprecated:
+    - Component "Ion Interior Split"
+  features:
+    - Added deprecation warnings.
+    - Added submaterial support for EMV.Meta
+    - Allowed disabling the primary siren through the context menu.
+    - Added EMV.RadarDisabled to disable a vehicle's radar.
+    - Allowed changing the turn signal keys.
+    - type: change
+      change: No signal sound will play if a vehicle has no turn signals.
+  library:
+    - Added tinted Whelen Legacy
+    - Added BPD phase to FS Integrity.
+    - Added Whelen Cenator.
+    - Added Whelen Epsilon Alternate.
+    - Added CHP Bike Siren.
+    - type: change
+      change: Replaced CHP horn.
+    - type: change
+      change: Replaced FS 80K.
+    - type: change
+      change: Updated Storm Pro name.
+  commands:
+    - "photon_emv_stayon: Allows sirens to stay on after the driver leaves their vehicle."
+    - "photon_emv_useillum: Allows disabling illumination lamps."
+    - "photon_radar_sound: Allows disabling the radar sound."
+    - type: fix
+      change: "emv_siren: Suggestions fixed and work for categories, IDs and names."
+  fixes:
+    - HUD function icons overwriting fixed.
+    - Fixed photon_menu.
+    - Fixed owner check on vehicles.
+    - Delay DHTML HUD creation.
+    - Express Creator will now get vehicle data properly.
+    - Fixed config page refresh.
+    - Siren option none can now have a checkmark.
+    - Fixed some missing patterns on the Federal Signal Viper Dual.
+    - COMPONENT.Meta.EmitArray now scales with the component.
+    - Fixed some error messages regarding concommands.
+---
