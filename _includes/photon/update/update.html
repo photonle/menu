@@ -1,0 +1,7 @@
+{% if update.legacy == null  %}
+	{% include photon/update/update_new.html update=update %}
+{% else if update.legacy == false %}
+	{% include photon/update/update_current.html update=update %}
+{% else %}
+	{% include photon/update/update_legacy.html update=update %}
+{% endif %}

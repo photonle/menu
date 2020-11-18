@@ -1,0 +1,68 @@
+{% if include.update.name %}
+<h2>Update {{ include.update.title }} - {{ include.update.name }}</h2>
+{% else %}
+<h2>Update {{ include.update.title }}</h2>
+{% endif %}
+<h3>{{ include.update.date | date: '%B %-d, %Y' }}</h3>
+
+{% for updateChanges in update.changes %}
+	{% assign type=updateChanges[0] %}
+	{% assign changes=updateChanges[1] %}
+	{% capture subtitle %}{{ type }}_subtitle{% endcapture %}
+	{% if changes.size > 0 %}
+		<h4>{{ site.data.titles[type] | default: "Changes" }}</h4>
+		{% if site.data.titles[subtitle] != null %}{{ site.data.titles[subtitle] | markdownify }}{% endif %}
+		<ul>
+			{% for change in changes %}
+				{% if change.first %}
+					<li class="{{ change.type }}">
+						{{ change.change }}
+					</li>
+				{% else %}
+					<li class="{{ site.data.defaults[type] | default: "new" }}">{{ change }}</li>
+				{% endif %}
+			{% endfor %}
+			{% if type == "changes" && update.content.size > 0 %}
+				{% assign contentDone = true %}
+				{{ update.content }}
+			{% endif %}
+		</ul>
+	{% endif %}
+{% endfor %}
+{% if contentDone == null && update.content.size > 0 %}
+<ul>
+	{{ update.content }}
+</ul>
+{% endif %}
+
+<!--{% if update.changes.size > 0 or update.content.size > 0 %}-->
+<!--<h4>Changes</h4>-->
+<!--<ul>-->
+<!--	{% for change in update.changes %}-->
+<!--		{{ change | json_encode }}-->
+<!--&lt;!&ndash;	{% if change.first %}&ndash;&gt;-->
+<!--&lt;!&ndash;	<li class="{{ change.type }}">&ndash;&gt;-->
+<!--&lt;!&ndash;		{{ change.change }}&ndash;&gt;-->
+<!--&lt;!&ndash;	</li>&ndash;&gt;-->
+<!--&lt;!&ndash;	{% else %}&ndash;&gt;-->
+<!--&lt;!&ndash;	<li class="change">{{ change }}</li>&ndash;&gt;-->
+<!--&lt;!&ndash;	{% endif %}&ndash;&gt;-->
+<!--	{% endfor %}-->
+<!--&lt;!&ndash;	{{ include.update.content }}&ndash;&gt;-->
+<!--</ul>-->
+<!--&lt;!&ndash;{% endif %}&ndash;&gt;-->
+<!--&lt;!&ndash;{% if update.library %}&ndash;&gt;-->
+
+<!--&lt;!&ndash;<h4>Core Library</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;<ul>&ndash;&gt;-->
+<!--&lt;!&ndash;	{% for change in update.library %}&ndash;&gt;-->
+<!--&lt;!&ndash;	{% if change.first %}&ndash;&gt;-->
+<!--&lt;!&ndash;	<li class="{{ change.type }}">&ndash;&gt;-->
+<!--&lt;!&ndash;		{{ change.change }}&ndash;&gt;-->
+<!--&lt;!&ndash;	</li>&ndash;&gt;-->
+<!--&lt;!&ndash;	{% else %}&ndash;&gt;-->
+<!--&lt;!&ndash;	<li class="new">{{ change }}</li>&ndash;&gt;-->
+<!--&lt;!&ndash;	{% endif %}&ndash;&gt;-->
+<!--&lt;!&ndash;	{% endfor %}&ndash;&gt;-->
+<!--&lt;!&ndash;</ul>&ndash;&gt;-->
+<!--&lt;!&ndash;{% endif %}&ndash;&gt;-->
