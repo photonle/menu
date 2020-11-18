@@ -1,44 +1,4 @@
 {% assign updates = site.updates | reverse %}
 {% for update in updates %}
-	{% if update.legacy != null && update.legacy == false %}
-		{% if update.name %}
-		<h2>Update {{ update.title }} - {{ update.name }}</h2>
-		{% else %}
-		<h2>Update {{ update.title }}</h2>
-		{% endif %}
-		<h3>{{ update.date | date: '%B %-d, %Y' }}</h3>
-
-		{% if update.changes.size > 0 or update.content.size > 0 %}
-		<h4>Changes</h4>
-		<ul>
-			{% for change in update.changes %}
-			{% if change.first %}
-			<li class="{{ change.type }}">
-				{{ change.change }}
-			</li>
-			{% else %}
-			<li class="change">{{ change }}</li>
-			{% endif %}
-			{% endfor %}
-			{{ update.content }}
-		</ul>
-		{% endif %}
-		{% if update.library %}
-
-		<h4>Core Library</h4>
-		<ul>
-			{% for change in update.library %}
-			{% if change.first %}
-				<li class="{{ change.type }}">
-					{{ change.change }}
-				</li>
-			{% else %}
-				<li class="new">{{ change }}</li>
-			{% endif %}
-			{% endfor %}
-		</ul>
-		{% endif %}
-	{% else %}
-		{{ update.content }}
-	{% endif %}
+	{% include photon/update/update.html update=update %}
 {% endfor %}
