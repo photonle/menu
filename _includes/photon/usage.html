@@ -1,83 +1,76 @@
 <h2>Using Photon</h2>
 <h3>Keys/Controls</h3>
 <ul>
-	<li><strong>Toggle Emergency Lighting</strong>
+	<li><strong>Lighting Toggle</strong>
 		<ul>
-			<li>Key: F</li>
+			<li><kbd data-bind="photon_key_primary_toggle">F</kbd></li>
 			<li><em>Turning off lights also deactivates the siren</em></li>
 		</ul>
 	</li>
-	<li><strong>Toggle Siren</strong>
+	<li><strong>Siren Toggle</strong>
 		<ul>
-			<li>Key: R</li>
+			<li><kbd data-bind="photon_key_siren_toggle">R</kbd></li>
 			<li><em>If the lights are not active, the siren will default to the hightest priority light mode and enable emergency lights.</em></li>
 		</ul>
 	</li>
-	<li><strong>Change Light Pattern</strong>
+	<li><strong>Lighting Mode</strong>
 		<ul>
-			<li>Key: Left Alt</li>
+			<li><kbd data-bind="photon_key_primary_alt">ALT</kbd></li>
 		</ul>
 	</li>
-	<li><strong>Illumination On/Off</strong>
+	<li><strong>Illumination</strong>
 		<ul>
-			<li>Key: X</li>
-			<li>Short press</li>
-			<li><em>New feature, capable vehicles will show "ILLUM" on HUD</em></li>
+			<li>Toggle: <kbd data-bind="photon_key_illum">X</kbd></li>
+			<li>Mode Switch: <kbd data-bind="photon_key_illum">X</kbd>🕑</li>
+			<li><em>Capable vehicles will show "ILLUM" on HUD</em></li>
 		</ul>
 	</li>
-	<li><strong>Illumination Toggle</strong>
+	<li><strong>Traffic Advisor</strong>
 		<ul>
-			<li>Key: X</li>
-			<li>Long press</li>
+			<li>Toggle: <kbd data-bind="photon_key_auxiliary">B</kbd></li>
+			<li>Mode Switch: <kbd data-bind="photon_key_auxiliary">B</kbd>🕑</li>
+			<li><em>Capable vehicles will show "AUXILIARY" on HUD</em></li>
 		</ul>
 	</li>
-	<li><strong>Traffic Advisor On/Off</strong>
+
+	<li><strong>Siren Mode</strong>
 		<ul>
-			<li>Key: B</li>
-			<li>Short press</li>
-		</ul>
-	</li>
-	<li><strong>Traffic Advisor Toggle Pattern</strong>
-		<ul>
-			<li>Key: B</li>
-			<li>Long press</li>
-		</ul>
-	</li>
-	<li><strong>Change Siren Tone</strong>
-		<ul>
-			<li>Key: Right-Click</li>
+			<li><kbd data-bind="photon_key_siren_alt">RMB</kbd></li>
 		</ul>
 	</li>
 	<li><strong>Manual Bullhorn</strong>
 		<ul>
-			<li>Key: G</li>
+			<li><kbd data-bind="photon_key_horn">G</kbd></li>
 		</ul>
 	</li>
 	<li><strong>Manual Siren</strong>
 		<ul>
-			<li>Key: T</li>
+			<li><kbd data-bind="photon_key_manual">T</kbd></li>
 			<li><em>Will sound the manual tone if it exists, otherwise it will use the wail tone.</em></li>
 		</ul>
 	</li>
 	<li><strong>Blackout</strong>
 		<ul>
-			<li>Key: H</li>
+			<li><kbd data-bind="photon_key_blackout">H</kbd></li>
 			<li><em>Disables head and marker lights for stealth work.</em></li>
 		</ul>
 	</li>
-	<li><strong>Signal Left</strong>
+	<li><strong>Turn Signals</strong>
 		<ul>
-			<li>Left-Click + A</li>
+			<li>Left: <kbd data-bind="photon_key_signal_activate">LMB</kbd> + <kbd data-bind="photon_key_signal_left">A</kbd></li>
+			<li>Right: <kbd data-bind="photon_key_signal_activate">LMB</kbd> + <kbd data-bind="photon_key_signal_right">D</kbd></li>
+			<li>Hazards: <kbd data-bind="photon_key_signal_activate">LMB</kbd> + <kbd data-bind="photon_key_signal_hazard">S</kbd></li>
 		</ul>
 	</li>
-	<li><strong>Signal Right</strong>
+	<li><strong>Select Siren Tone</strong>
 		<ul>
-			<li>Left-Click + D</li>
+			<li><kbd data-bind="photon_key_siren1">1</kbd>, <kbd data-bind="photon_key_siren2">2</kbd>, <kbd data-bind="photon_key_siren3">3</kbd>, <kbd data-bind="photon_key_siren4">4</kbd></li>
+			<li><em>Select the given siren tone.</em></li>
 		</ul>
 	</li>
-	<li><strong>Hazards</strong>
+	<li><strong>Toggle Radar HUD</strong>
 		<ul>
-			<li>Left-Click + S</li>
+			<li><kbd data-bind="photon_key_radar">O</kbd></li>
 		</ul>
 	</li>
 </ul>
