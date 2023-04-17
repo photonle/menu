@@ -185,3 +185,34 @@ h4 {
 code {
 	color: #9ba9b9
 }
+
+.long-press {
+	&::before {
+		font-family: "Font Awesome 5 Free";
+		color: black;
+		font-weight: 900;
+		left: -2em;
+		position: absolute;
+		text-align: center;
+		width: 2em;
+		line-height: inherit;
+		content: "\f017";
+	}
+}
+
+kbd {
+	border: #404040 solid 1px;
+	border-top-color: darken(#404040, 10%);
+	font-family: monospace;
+	font-weight: bolder;
+	box-shadow: darken(#404040, 10%);
+	background-color: lighten(#404040, 65%);
+	border-radius: 4px;
+	color: black;
+	display: inline-block;
+	margin: 0 .1em;
+	overflow-wrap: break-word;
+	padding: .1em .6em;
+	text-shadow: #404040;
+}
+
