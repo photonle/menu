@@ -174,15 +174,11 @@ window.game = {
 	},
 
 	get_key_callback: function(command, code){
-		console.log("callback")
-		console.log(command)
-		console.log(String(code))
 		if (code === "nil"){
 			return
 		}
 
 		code = parseInt(code)
-		console.log(code)
 		$(`[data-bind="${command}"]`).each(function(_, element){
 			element.innerText = game.key_map[code]
 			$(element).attr('data-code', code)
